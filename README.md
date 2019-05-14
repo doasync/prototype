@@ -1,4 +1,30 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Implementation prototype requirements
+
+## State description
+
+- Loading - fake loading, bound to 5-second timer.
+
+- Listening - fake BT device listening, Discovery of 3 fake devices is imitated, each one with 3-second delay, after that devices start disappearing one-by one starting with the first one with 3-second delay each. Rinse and repeat from start. Listening routine should be started on state entry and stopped on state exit. Tapping a device results in switching to connecting to that device (Thus stopping discovery etc.).
+
+- Connecting - fake BT device connection state. Connection process lasts for 5 seconds and may result either in successful connection (50% probability) or failure otherwise.
+
+- Communication - fake BT message listening. On entry a message listening routine is started, simulating receiving of 1 text message (50 characters of lorem ipsum) at random interval (1-5 seconds). On state exit the routine should be stopped.
+
+- Clean - no message is received, the next message received by the parent state is accepted and displayed switching to the "Message displayed" state.
+
+- Message displayed - a message is displayed, allowing the user to accept it. any message received by the parent state is dropped (this state does not accept messages).
+
+- At any moment during the application execution a "Quit" action is provided, allowing to terminate the application, invoking any current state/substate exit actions, thus stopping device listening/message listening routines.
+
+## Design
+
+The UI should contain controls, allowing to execute the supported actions, the rest should be minimized. Listening state should display the list of currently "discovered" devices.
+
+## State chart
+
+![State Chart](https://i.imgur.com/m1IAH8B.png "State Chart")
+
+---
 
 ## Available Scripts
 
