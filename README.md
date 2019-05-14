@@ -1,5 +1,9 @@
 # Implementation prototype requirements
 
+## Demo
+
+https://codesandbox.io/s/kk3yxy13l5
+
 ## State description
 
 - Loading - fake loading, bound to 5-second timer.
