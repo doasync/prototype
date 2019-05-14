@@ -3,8 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "effector": "^0.18.6",
+    "effector-react": "^0.18.9",
+    "invariant": "^2.2.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-hot-loader": "^4.8.4",
+    "styled-components": "^4.0.0",
+    "styled-normalize": "^8.0.6",
     "react-scripts": "3.0.1"
   },
   "scripts": {
@@ -29,3 +35,4 @@
     ]
   }
 }
+
